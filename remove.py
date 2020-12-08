@@ -29,9 +29,10 @@ def execute(client, command):
 if __name__ == "__main__":
     remote = connect_to_droplet()
     execute(remote, 'cd /var/www/mikkegf.codes;rm -r *')
-    output = execute(remote, 'ls')
+    output = execute(remote, 'ls -al')
     print(output.readlines())
+    print('Success!')
     exit(0)
 
-# Move new build file to droplet
+
 
