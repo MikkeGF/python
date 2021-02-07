@@ -28,7 +28,7 @@ def execute(client, command):
 
 if __name__ == "__main__":
     remote = connect_to_droplet()
-    execute(remote, 'cd /var/www/mikkegf.codes;rm -r *')
+    execute(remote, 'rm -rf /var/www/mikkegf.codes/*;')
     output = execute(remote, 'ls -al')
     print(output.readlines())
     print('Success!')
